@@ -1,7 +1,5 @@
 import database from "infra/database.js";
 
-
-
 async function status(request, response) { 
   const updatedAt = new Date().toISOString();
   
@@ -17,8 +15,6 @@ async function status(request, response) {
     values: [databaseName]
   });
   const openedConnectionsValue = openedConnections.rows[0].count;
-
-
 
   response.status(200).json({
     updated_at: updatedAt,
