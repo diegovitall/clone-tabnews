@@ -12,8 +12,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "lts/hydrogen"
+          node-version: "20.12.1"
 
       - run: npm ci
 
-      - run: npm run test:ci-no-next
+      - run: npm run test
