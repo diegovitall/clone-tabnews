@@ -22,4 +22,3 @@ test("GET to /api/v1/status should return 200", async () => {
   const openedConnections = await responseBody.dependencies.opened_connections;
   expect(openedConnections).toEqual(1);
 });
-
