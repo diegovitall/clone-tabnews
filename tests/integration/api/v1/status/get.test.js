@@ -14,10 +14,10 @@ test("GET to /api/v1/status should return 200", async () => {
   expect(responseBody.updated_at).toEqual(parsedUpdatedAt);
 
   const postgresVersion = await responseBody.dependencies.postgres_version;
-  //expect(postgresVersion).toMatch(/^[\d\.]+$/);
+  expect(postgresVersion).toMatch("16.0");
 
   const maxConnections = await responseBody.dependencies.max_connections;
-  //expect(maxConnections).toEqual(100);
+  expect(maxConnections).toEqual(100);
 
   const openedConnections = await responseBody.dependencies.opened_connections;
   expect(openedConnections).toEqual(1);
