@@ -17,7 +17,7 @@
     "migrations:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
-    "lint:eslint:check": "eslint . --ignore-pattern 'infra/migrations/1764249638156_test.js'",
+    "lint:eslint:check": "eslint . --ignore-pattern 'infra/migrations/'",
     "prepare": "husky",
     "commit": "cz"
   },
@@ -31,7 +31,8 @@
     "node-pg-migrate": "^6.2.2",
     "pg": "^8.16.3",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "swr": "2.3.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
