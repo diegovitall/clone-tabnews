@@ -35,16 +35,10 @@ exports.up = (pgm) => {
 
     updated_at: {
       type: "timestamptz",
-<<<<<<< HEAD
       notNull: true,
       default: pgm.func("timezone('utc', now())"),
-    }
-  })
-=======
-      default: pgm.func("now()"),
     },
   });
->>>>>>> 0a27d6a (feat: create user model and api/v1/users endpoint)
 };
 
 exports.down = false;
