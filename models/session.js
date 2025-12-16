@@ -87,7 +87,7 @@ async function expireById(sessionId) {
   const expiredSessionObject = await runUpdateQuery(sessionId);
   return expiredSessionObject;
 
-  async function runUpdateQuery(sessionId, expiresAt) {
+  async function runUpdateQuery(sessionId) {
     const results = await database.query({
       text: `
         UPDATE
